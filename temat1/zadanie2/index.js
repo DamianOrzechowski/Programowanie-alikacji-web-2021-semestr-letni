@@ -12,8 +12,8 @@ function logPerson(person) {
     console.log(person.name + " " + person.surname + ", " + person.age + ", " + person.role);
 }
 function filterPersons(persons, criteria) {
-    var _this = this;
-    persons.filter(function (el) { return el.role === _this.criteria; }); // to vyba nie jest dobrze
+    //persons.filter(el => el.role === this.criteria) // to vyba nie jest dobrze
+    return null;
     // TODO: zaimplementować funkcję, która przefiltruje tablicę persons za pomocą predykatu criteria
 }
 //AD.1
