@@ -23,7 +23,8 @@ interface Person {
     }
     
     function filterPersons(persons: Person[], criteria: any): Person[] {
-        persons.filter(el => el === this.criteria) // to vyba nie jest dobrze
+        //persons.filter(el => el.role === this.criteria) // to vyba nie jest dobrze
+        return null;
     // TODO: zaimplementować funkcję, która przefiltruje tablicę persons za pomocą predykatu criteria
     }
 
@@ -51,6 +52,11 @@ interface Person {
     
     personsad3.forEach(person =>{
         logPerson(person)})
+
+    //AD.4
+    console.log('AD.4')
+    const personsad4 = filterPersons(persons, {name: 'Adam'});
+    console.log(personsad4)
    
 
 

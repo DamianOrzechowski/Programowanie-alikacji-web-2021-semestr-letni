@@ -13,7 +13,7 @@ function logPerson(person) {
 }
 function filterPersons(persons, criteria) {
     var _this = this;
-    persons.filter(function (el) { return el === _this.criteria; }); // to vyba nie jest dobrze
+    persons.filter(function (el) { return el.role === _this.criteria; }); // to vyba nie jest dobrze
     // TODO: zaimplementować funkcję, która przefiltruje tablicę persons za pomocą predykatu criteria
 }
 //AD.1
@@ -36,6 +36,10 @@ var personsad3 = persons.filter(function (person) { return person.age > 25; });
 personsad3.forEach(function (person) {
     logPerson(person);
 });
+//AD.4
+console.log('AD.4');
+var personsad4 = filterPersons(persons, { name: 'Adam' });
+console.log(personsad4);
 // TODO:
 // 1. Przy pomocy funkcji logPerson wypisać osoby z tablicy users i admins (patrz foreach)
 // 2. Złączyć tablice users i admins i wypisać zawartość złączonej tablicy na konsoli (patrz operator spread)
