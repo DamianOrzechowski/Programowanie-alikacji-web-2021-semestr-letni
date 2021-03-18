@@ -19,18 +19,38 @@ interface Person {
     
     function logPerson(person: Person) {
     // TODO: dodać wypisywanie na konsoli danych osoby: "imię nazwisko, wiek, rola"
-    console.log(`${this.name} ${this.surname}, ${this.age}, ${this.role}`)
+    console.log(`${person.name} ${person.surname}, ${person.age}, ${person.role}`)
     }
     
-    //function filterPersons(persons: Person[], criteria: any): Person[] {
+    function filterPersons(persons: Person[], criteria: any): Person[] {
+        persons.filter(el => el === this.criteria) // to vyba nie jest dobrze
     // TODO: zaimplementować funkcję, która przefiltruje tablicę persons za pomocą predykatu criteria
-    //}
-    //AD.1
+    }
 
-    users.forEach(user => {
-        logPerson(user)
-        
-    });
+    //AD.1
+    console.log('AD.1')
+
+   users.forEach(user=>{
+      logPerson(user);
+   })
+   admins.forEach(admin=>{
+    logPerson(admin);
+ })
+
+    //AD.2
+    console.log('AD.2')
+     const persons = [...users,...admins]
+     persons.forEach(person =>{
+         logPerson(person)
+     })
+
+     //AD.3
+    console.log('AD.3')
+
+    const personsad3 = persons.filter(person => person.age > 25)
+    
+    personsad3.forEach(person =>{
+        logPerson(person)})
    
 
 
@@ -39,3 +59,4 @@ interface Person {
     // 2. Złączyć tablice users i admins i wypisać zawartość złączonej tablicy na konsoli (patrz operator spread)
     // 3. Wypisać osoby powyżej 25 lat (patrz operator filter)
     // 4. Wypisać osoby o imieniu Adam (zaimplementować funkcję filterPersons) -> const filtered = filterPersons(persons, { name: 'Adam' });
+    document.body.innerHTML = 'polaczone'
