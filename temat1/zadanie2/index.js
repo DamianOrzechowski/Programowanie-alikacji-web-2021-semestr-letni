@@ -12,8 +12,9 @@ function logPerson(person) {
     console.log(person.name + " " + person.surname + ", " + person.age + ", " + person.role);
 }
 function filterPersons(persons, criteria) {
-    //persons.filter(el => el.role === this.criteria) // to vyba nie jest dobrze
-    return null;
+    var _this = this;
+    var filterp = persons.filter(function (el) { return el.role === _this.criteria; }); // to vyba nie jest dobrze
+    return filterp;
     // TODO: zaimplementować funkcję, która przefiltruje tablicę persons za pomocą predykatu criteria
 }
 //AD.1
@@ -30,6 +31,8 @@ var persons = users.concat(admins);
 persons.forEach(function (person) {
     logPerson(person);
 });
+console.log('test');
+persons.forEach(logPerson);
 //AD.3
 console.log('AD.3');
 var personsad3 = persons.filter(function (person) { return person.age > 25; });
