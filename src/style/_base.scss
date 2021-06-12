@@ -1,0 +1,45 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+ul {
+    list-style: none;
+}
+
+//Height
+$height-side:100vh;
+//Padding
+$padding-basic:10px;
+$padding-button:15px 32px;
+//Margin
+$margin-basic:10px;
+//Font
+$font-basic:'Helvetica', sans-serif;
+$fontsize-basic:40px;
+$fontsize-button:30px;
+//Colors
+$color-bakcground:#87957F;
+$color-text: #E1E0DE;
+$color-button:#3A4635;
+$color-white:white;
+
+
+@mixin flexCenter() {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: $height-side;
+}
+@mixin mode-button() {
+    
+    background-color: $color-button; 
+    margin: $margin-basic;
+    border: none;
+    color: $color-white;
+    padding: $padding-button;
+    text-decoration: none;
+    display: inline-block;
+    font-size: $fontsize-button;
+}

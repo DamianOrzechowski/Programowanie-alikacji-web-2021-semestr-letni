@@ -2,10 +2,15 @@ import { Games } from './game.enum'
 import { Game } from "./game.model";
 import { TicTacToe } from './ticTacToe/Tictactoe'
 
+import './style/styles.scss';
+
 class App {
 
     constructor() {
-        this.init();        
+        this.init();  
+        console.log('kotek')
+        
+              
     }
 
     init(): void {
@@ -45,6 +50,10 @@ class App {
         document.body.appendChild(closeButton)
         document.body.appendChild(menuContainer);
         document.body.appendChild(gameContainer);
+        var btn = document.createElement("BUTTON");   // Create a <button> element
+        btn.innerHTML = "Change style";                   // Insert text
+        document.body.appendChild(btn);               // Append <button> to <body>
+        
     }
   }
   class gameObject {
@@ -90,3 +99,5 @@ class App {
 
   }
   const myApp=new App();
+
+  

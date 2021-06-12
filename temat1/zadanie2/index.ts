@@ -23,7 +23,7 @@ interface Person {
     }
     
     function filterPersons(persons: Person[], criteria: any): Person[] {
-        let filterp = persons.filter(el => el.role === this.criteria) // to vyba nie jest dobrze
+        let filterp = persons.filter(person => person.name == criteria.name || person.surname == criteria.surname || person.age == criteria.age || person.role == criteria.role) // to vyba nie jest dobrze
         return filterp;
     // TODO: zaimplementować funkcję, która przefiltruje tablicę persons za pomocą predykatu criteria
     }

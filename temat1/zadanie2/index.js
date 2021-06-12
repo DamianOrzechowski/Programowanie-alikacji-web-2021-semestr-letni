@@ -1,3 +1,8 @@
+var __spreadArray = (this && this.__spreadArray) || function (to, from) {
+    for (var i = 0, il = from.length, j = to.length; i < il; i++, j++)
+        to[j] = from[i];
+    return to;
+};
 var users = [
     { name: 'John', surname: 'Smith', age: 25, role: 'user' },
     { name: 'Adam', surname: 'Johnson', age: 35, role: 'user' },
@@ -12,8 +17,7 @@ function logPerson(person) {
     console.log(person.name + " " + person.surname + ", " + person.age + ", " + person.role);
 }
 function filterPersons(persons, criteria) {
-    var _this = this;
-    var filterp = persons.filter(function (el) { return el.role === _this.criteria; }); // to vyba nie jest dobrze
+    var filterp = persons.filter(function (person) { return person.name == criteria.name || person.surname == criteria.surname || person.age == criteria.age || person.role == criteria.role; }); // to vyba nie jest dobrze
     return filterp;
     // TODO: zaimplementować funkcję, która przefiltruje tablicę persons za pomocą predykatu criteria
 }
@@ -27,7 +31,7 @@ admins.forEach(function (admin) {
 });
 //AD.2
 console.log('AD.2');
-var persons = users.concat(admins);
+var persons = __spreadArray(__spreadArray([], users), admins);
 persons.forEach(function (person) {
     logPerson(person);
 });
