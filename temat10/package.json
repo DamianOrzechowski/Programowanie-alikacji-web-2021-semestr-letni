@@ -17,7 +17,9 @@
   },
   "homepage": "https://github.com/JKosciukiewicz/ProgramowanieWebowe#readme",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.3"
+    "@fortawesome/fontawesome-free": "^5.15.3",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.13"
   },
   "devDependencies": {
     "css-loader": "^5.2.6",

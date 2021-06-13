@@ -4,6 +4,19 @@ import { TicTacToe } from './ticTacToe/Tictactoe'
 
 import './style/styles.scss';
 
+
+
+var a,b,resoult;
+a=0;
+b=1;
+resoult=b;
+for (let index = 1; index < 100; index++) {
+  console.log(resoult)
+  resoult=a+b;
+  a=b;
+  b=resoult;
+  
+}
 class App {
 
     constructor() {
