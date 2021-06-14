@@ -15,7 +15,7 @@
   \***********************/
 /***/ (() => {
 
-eval("var socket = new WebSocket(\"ws://localhost:8080\");\r\nsocket.onopen = function (e) {\r\n    socket.send(\"Hello traveler\");\r\n};\r\nsocket.onmessage = function (event) {\r\n    var msg = document.getElementById('messages');\r\n    var item = document.createElement('li');\r\n    item.textContent = event.data;\r\n    msg === null || msg === void 0 ? void 0 : msg.appendChild(item);\r\n};\r\ndocument.getElementById('send').addEventListener('click', function () {\r\n    socket.send(document.getElementById('msg').value);\r\n});\r\n\n\n//# sourceURL=webpack://programowaniewebowe/./src/client.ts?");
+eval("var socket = new WebSocket(\"ws://localhost:8080\");\r\nsocket.onopen = function (e) {\r\n    socket.send(\"Hello traveler\");\r\n};\r\n//\r\nsocket.onmessage = function (event) {\r\n    var msg = document.getElementById('messages');\r\n    var item = document.createElement('li');\r\n    item.textContent = event.data; //zawartośc wysłana przez websocket\r\n    msg === null || msg === void 0 ? void 0 : msg.appendChild(item);\r\n};\r\n//wysyłanie\r\ndocument.getElementById('send').addEventListener('click', function () {\r\n    socket.send(document.getElementById('msg').value);\r\n});\r\n\n\n//# sourceURL=webpack://programowaniewebowe/./src/client.ts?");
 
 /***/ })
 
