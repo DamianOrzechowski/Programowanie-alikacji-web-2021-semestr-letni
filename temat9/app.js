@@ -10,4 +10,4 @@ require('./routers/product.routes')(app);
 require('./routers/category.routers')(app);
 
 
-app.listen(8080, () => console.log('Example app listening on port 3000!'));
+app.listen(8080, () => console.log('Example app listening on port 8080!'));
