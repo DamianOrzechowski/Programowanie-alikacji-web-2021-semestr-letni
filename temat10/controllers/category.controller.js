@@ -1,41 +1,38 @@
 const Category = require('../models/category.model');
 
-const categories = [];
+
+
 
 exports.getAll = (req, res) => {
-	res.status(200).send(categories);
-};
+    Category.find().exec(function (err, categories) {
+        res.status(200).send(categories);
+    });  
+  };
 
 exports.add = (req, res) => {
-	console.log(req.body)
-	const category = new Category(req.body.id,req.body.name,req.body.quantity);
-    categories.push(category);
-	res.status(201).send(category);
-	
-};
+  
+    const category = new Category({
+      name: req.body.name
+    });    
+    category.save(err => {
+      if (err) {
+        console.log(err);
+        return false;;
+      }
+      return true;
+    });  
+  
 
-exports.update = (req, res) => {
-	
-	const id = req.body.id;
-	const name = req.body.name;
-	const quantity = req.body.quantity;
+}
 
-	const newCategory = new Category(id, name,quantity);
-	const searchedIndex = categories.findIndex(
-		(category) => category.id === id
-	);
+exports.update = (req, res) =>{
+ Category.updateOne({_id: req.body.id}, {
+  name: req.body.name,
+}).exec();
+}
 
-	categories.splice(searchedIndex, 1, newCategory);
-	res.status(200).send(newCategory);
-};
 
 exports.delete = (req, res) => {
-	const id = req.params.id;
+	Category.deleteOne({ _id: req.body.id }).exec();
+}
 
-	const searchedIndex = categories.findIndex(
-		(category) => category.id === id
-	);
-
-	const deletedCategory = categories.splice(searchedIndex, 1);
-	res.status(200).send(deletedCategory);
-};

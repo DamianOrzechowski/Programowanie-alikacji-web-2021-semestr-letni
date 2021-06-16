@@ -19,9 +19,9 @@ exports.update = (req,res) => {
   const price = req.body.price
 
 	const newProduct = new Product(id, name, description, price);
-	const searchedIndex = products.findIndex((product) => product.id === id);
+	const searchId = products.findIndex((product) => product.id === id);
 
-	products.splice(searchedIndex, 1, newProduct);
+	products.splice(searchId, 1, newProduct);
 	res.status(200).send(newProduct);
 
 }
@@ -30,9 +30,9 @@ exports.delete = (req,res) =>{
 
   const id = req.params.id;
 
-	const searchedIndex = products.findIndex((product) => product.id === id);
+	const searchID = products.findIndex((product) => product.id === id);
 
-	const deletedProduct = products.splice(searchedIndex, 1);
-	res.status(200).send(deletedProduct);
+	const deleteProduct = products.splice(searchID, 1);
+	res.status(200).send(deleteProduct);
 
 }

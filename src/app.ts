@@ -6,22 +6,60 @@ import './style/styles.scss';
 
 
 
-var a,b,resoult;
-a=0;
-b=1;
+var resoult:number;
+let  a:number=0;
+let b:number=1;
+let c:number |string;
+
 resoult=b;
-for (let index = 1; index < 100; index++) {
+for (let index:number = 1; index < 100; index++) {
+  
   console.log(resoult)
   resoult=a+b;
   a=b;
   b=resoult;
   
 }
+function addnumber(first:number,second:number):number{
+  return first+second
+}
+
+console.log(addnumber(2,3))
+var btn = document.createElement("BUTTON");
+        btn.className='kot'   // Create a <button> element
+        btn.innerHTML = "Change style";                   // Insert text
+        document.body.appendChild(btn);
+        var input = document.createElement("INPUT");
+        document.body.appendChild(input)
+        
+        
+
+        function podczasklikania(){
+          
+  
+        }
+btn.addEventListener('click',podczasklikania)
+
+
+class Wypiszliczby{
+  constructor(){
+    console.log('cos')
+
+  }
+  doadj():void{
+    console.log('dodaj a do b ')
+    console.log(addnumber(5,6))
+
+  }
+}
+const myaApp=new Wypiszliczby();
+myaApp.doadj();
+
 class App {
 
     constructor() {
         this.init();  
-        console.log('kotek')
+       
         
               
     }
@@ -63,9 +101,7 @@ class App {
         document.body.appendChild(closeButton)
         document.body.appendChild(menuContainer);
         document.body.appendChild(gameContainer);
-        var btn = document.createElement("BUTTON");   // Create a <button> element
-        btn.innerHTML = "Change style";                   // Insert text
-        document.body.appendChild(btn);               // Append <button> to <body>
+                       // Append <button> to <body>
         
     }
   }

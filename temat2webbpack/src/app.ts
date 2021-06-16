@@ -9,6 +9,7 @@ let tom: Animal = new Horse("Tommy the Palomino");
 
 sam.move();
 tom.move(34);
+console.log('cos')
 
 
 

@@ -86,7 +86,7 @@ eval("\r\nvar __extends = (this && this.__extends) || (function () {\r\n    var 
   \********************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-eval("\r\nexports.__esModule = true;\r\nvar Horse_1 = __webpack_require__(/*! ./Horse */ \"./src/Horse.ts\");\r\nvar Snake_1 = __webpack_require__(/*! ./Snake */ \"./src/Snake.ts\");\r\n__webpack_require__(/*! ./style/styles.scss */ \"./src/style/styles.scss\");\r\nvar sam = new Snake_1[\"default\"](\"Sammy the Python\");\r\nvar tom = new Horse_1[\"default\"](\"Tommy the Palomino\");\r\nsam.move();\r\ntom.move(34);\r\n\n\n//# sourceURL=webpack://programowaniewebowe/./src/app.ts?");
+eval("\r\nexports.__esModule = true;\r\nvar Horse_1 = __webpack_require__(/*! ./Horse */ \"./src/Horse.ts\");\r\nvar Snake_1 = __webpack_require__(/*! ./Snake */ \"./src/Snake.ts\");\r\n__webpack_require__(/*! ./style/styles.scss */ \"./src/style/styles.scss\");\r\nvar sam = new Snake_1[\"default\"](\"Sammy the Python\");\r\nvar tom = new Horse_1[\"default\"](\"Tommy the Palomino\");\r\nsam.move();\r\ntom.move(34);\r\nconsole.log('cos');\r\n\n\n//# sourceURL=webpack://programowaniewebowe/./src/app.ts?");
 
 /***/ })
 

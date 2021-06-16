@@ -11,25 +11,29 @@ POST http://localhost:8080/products HTTP/1.1
 content-type: application/json
 
 {
-    "id":"1",
-    "name": "Telewizor",
-    "description": "Telewizor plazmowy",
-    "price": 5000
+    "name": "Wanna",
+    "description": "Wanna z drabiną",
+    "price": 2525,
+    "category":"60c7b42c4449ad384c37a8be"
 }
 //dodanie do tablicy elementu
 ###
-DELETE http://localhost:8080/products/1 HTTP/1.1
-###
-PUT http://localhost:8080/products/ 
+DELETE http://localhost:8080/products HTTP/1.1
 content-type: application/json
 
 {
-    "id":"1",
-    "name":"Telewizor zmieniony",
-    "description":"Telewizor plazwmowy zmienony",
-    "price":500
+    "id": "60c7b43f4449ad384c37a8bf"
 }
+###
+PUT http://localhost:8080/products HTTP/1.1
+content-type: application/json
 
+{
+    "id": "60c7a25f6fd9cb1198f2a898",
+    "name": "Kamera 5",
+    "description": "Telewizor plazmowy",
+    "price": 15000
+}
 
 
 
@@ -40,25 +44,25 @@ GET  http://localhost:8080/categories  HTTP/1.1
 //product
 ###
 
-POST http://localhost:8080/categories 
+POST http://localhost:8080/categories  HTTP/1.1
 content-type: application/json
 
 {
-    "id":"5",
-    "name": "Myszki komputerowe",
-    "quantity": 220
-    
+    "name": "RTV i AGD"
 }
 //dodanie do tablicy elementu
 ###
-DELETE http://localhost:8080/categories/2 
+DELETE http://localhost:8080/localhost:8080/categories  HTTP/1.1
+content-type: application/json
+
+{
+    "id": "60c7b669440c1a09d454b3d9"
+}
 ###
 PUT http://localhost:8080/categories/ 
 content-type: application/json
 
 {
-    "id":"2",
-    "name": "Myszki komputerowe zmienone",
-    "quantity":250
-    
+    "id": "60c7b669440c1a09d454b3d9",
+    "name": "Lodówki"
 }
